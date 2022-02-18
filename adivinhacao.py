@@ -37,7 +37,7 @@ def jogar():
             continue
 
         if(acertou):
-            print("Você acertou, os seus pontos foram: {} !".format(pontos))
+            imprime_mensagem_vencedor(numero_secreto, pontos)
             break
         else:
             if (maior):
@@ -51,8 +51,42 @@ def jogar():
         if (rodada < total_de_tentativas):
             print("--------------------------------------------------")
         if (rodada == total_de_tentativas):
-            print("O numero secreto era: {} ! Você fez {} pontos.".format(numero_secreto, pontos))
+            imprime_mensagem_perdedor(numero_secreto, pontos)
     print("################### Fim do jogo! ####################")
+
+def imprime_mensagem_vencedor(numero_secreto, pontos):
+    print("Parabéns, você ganhou!")
+    print("A numero secreto era {} !! Você fez {} pontos.".format(numero_secreto, pontos))
+    print("       ___________      ")
+    print("      '._==_==_=_.'     ")
+    print("      .-\\:      /-.    ")
+    print("     | (|:.     |) |    ")
+    print("      '-|:.     |-'     ")
+    print("        \\::.    /      ")
+    print("         '::. .'        ")
+    print("           ) (          ")
+    print("         _.' '._        ")
+    print("        '-------'       ")
+
+def imprime_mensagem_perdedor(numero_secreto, pontos):
+    print("Puxa, você perdeu =/ !")
+    print("A numero secreto era {} !! Você fez {} pontos.".format(numero_secreto, pontos))
+    print("    _______________         ")
+    print("   /               \       ")
+    print("  /                 \      ")
+    print("//                   \/\  ")
+    print("\|   XXXX     XXXX   | /   ")
+    print(" |   XXXX     XXXX   |/     ")
+    print(" |   XXX       XXX   |      ")
+    print(" |                   |      ")
+    print(" \__      XXX      __/     ")
+    print("   |\     XXX     /|       ")
+    print("   | |           | |        ")
+    print("   | I I I I I I I |        ")
+    print("   |  I I I I I I  |        ")
+    print("   \_             _/       ")
+    print("     \_         _/         ")
+    print("       \_______/           ")
 
 if(__name__ == "__main__"):
     jogar()
